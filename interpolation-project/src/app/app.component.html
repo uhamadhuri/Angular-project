@@ -1,0 +1,27 @@
+
+<h1> User Email List:</h1>
+<div class="container" >
+    <ol>
+        <li *ngFor="let data of users;">{{data.email}}</li>
+      </ol>
+      
+
+</div>
+<thead>
+  <tr>
+    <th>Id:</th>
+    <th>Name:</th>
+  </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let data of users;">
+        <td *ngIf="data.id%2==0">{{data.id}}</td>
+        <td *ngIf="data.id%2==0">{{data.name}}</td>
+    </tr>
+    
+
+</tbody>
+ 
+
+
+
