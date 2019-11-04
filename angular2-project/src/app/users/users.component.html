@@ -1,0 +1,20 @@
+<table class="table-striped mx-5 my-5">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>name</th>
+            <th>email</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of response" id="{{user.id}}">
+            <td>
+                <a routerLink="/servers/:{{user.id}}" routerLinkActive="active">{{user.id}}</a>
+            </td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td><button  class="btn btn-success" (click)= gotoEdit($event)>Edit</button></td>
+        </tr>
+    </tbody>
+</table>
