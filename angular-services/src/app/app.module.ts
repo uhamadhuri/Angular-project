@@ -1,3 +1,4 @@
+import { Usereditcomponent } from './useredit/useredit.component';
 import { Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -11,7 +12,8 @@ import { RouterModule } from "@angular/router";
 import { apiService } from './api.service';
 import {HttpClientModule} from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import { userEditComponent } from './userEdit/userEdit.component';
+
+
 const Route:any=[{
   path:'',
   redirectTo:"home",
@@ -20,14 +22,15 @@ const Route:any=[{
 },
 {path:"home", component:homeComponent},
 {path:"services",component:servicesComponent},
-{path:"userEdit/:id",component:userEditComponent}
+{path:"userEdit/:id",component:Usereditcomponent}
 ]
 @NgModule({
   declarations: [
     AppComponent,headerComponent,
     navbarComponent,homeComponent,
     servicesComponent,
-    userEditComponent
+    Usereditcomponent
+    
   ],
   imports: [
     BrowserModule,

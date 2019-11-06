@@ -19,13 +19,13 @@ export class homeComponent{
     }
     getUsers(){
         this.service.fetchUsers().subscribe(
-            res=>{
+            (res)=>{
                 this.users=res;
             }
         )
     }
-    gotoEdit(id){
-        this.router.navigate(["userEdit",id]);
+    gotoEdit(data){
+        this.router.navigate(["userEdit",data.id]);
         
     }
 }
