@@ -1,0 +1,27 @@
+.card{
+    border:1px solid #dadada;
+    width:20%;
+    margin:10px;
+    display: inline-block;
+    text-align: center;
+    background:lightyellow;
+}
+.card-title{
+    border-bottom: 2px solid #dadada;
+    width:100%;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color:green;
+    font-family:'Times New Roman', Times, serif;
+}
+.card-body{
+    border-bottom: 2px solid #dadada;
+    font-size: 20px;
+}
+.card1{
+    font-size:18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color:blue;
+}
