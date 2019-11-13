@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-services';
+  public nove:any="VBM";
+  handlerename(){
+    this.title="uha"
+  }
+  handlereset(){
+    this.title="madhuri"
+  }
+
+
 }

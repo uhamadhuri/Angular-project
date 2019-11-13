@@ -13,6 +13,7 @@ export class homeComponent{
     public users:any;
    
     id;
+  
     constructor(private service:apiService, private router:Router){
         
         this.getUsers();
@@ -20,6 +21,7 @@ export class homeComponent{
     getUsers(){
         this.service.fetchUsers().subscribe(
             (res)=>{
+                this.service.userdata=res;
                 this.users=res;
             }
         )
@@ -28,4 +30,24 @@ export class homeComponent{
         this.router.navigate(["userEdit",data.id]);
         
     }
-}
+    changeevent(event){
+        var searchkey=event.target.value;
+        if(searchkey){
+            this.users=this.users.filter(res=>{
+                var name=res.name.toLowerCase();
+                return name.indexOf(searchkey)!==-1
+            });
+           
+            }
+            else
+                
+                {
+                    this.users=this.service.userdata;
+                }
+            
+        }
+    }
+
+    
+
+   

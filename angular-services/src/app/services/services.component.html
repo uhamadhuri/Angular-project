@@ -1,1 +1,17 @@
-services works
+<div><input type="text" class="ml-2" placeholder="type text" (keyup)="  namechange($event)"/>
+<h1 *ngIf="name">Display name:{{name}}</h1>
+<ng-template #test>
+    <h1>there is no content</h1>
+</ng-template></div>
+<div>
+<input type="text" class="ml-2 mt-4" placeholder="type text" (keyup)="  namechange($event)"/>
+<h1 *ngIf="name;else test then xyz test">Display name:{{name}}</h1>
+<ng-template #xyz>
+    <h1>there is some content</h1>
+</ng-template>
+</div>
+
+<h1>{{trial}}</h1>
+
+<button class="btn btn-success" (click)="gotorename()">Rename</button>
+<button class="btn btn-success ml-3" (click)="gotoreset()">Reset</button>

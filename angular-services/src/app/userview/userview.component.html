@@ -1,0 +1,21 @@
+<div>
+    <label>name</label>
+<input type="text"  (keyup)="handlechange1($event)">
+</div>
+<div>
+    <label>username</label>
+<input type="text" (keyup)="handlechange2($event)">
+</div>
+<div>
+    <label>email</label>
+<input type="email" (keyup)="handlechange3($event)"  >
+</div>
+<div>
+    <label>phoneno</label>
+<input type="text" (keyup)="handlechange4($event)" >
+</div>
+<div>
+    <label>website</label>
+<input type="text" (keyup)="handlechange5($event)" >
+</div>
+<button class="btn btn-success mb-4" (click)="getdata()">Save</button>

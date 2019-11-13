@@ -6,10 +6,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class apiService{
     [x: string]: any;
+     userdata:any=[];
     constructor( private http:HttpClient){
 
     }
     fetchUsers(){
+        
+
         return this.http.get("https://jsonplaceholder.typicode.com/users")
     }
     getuserInfo(id:any){
