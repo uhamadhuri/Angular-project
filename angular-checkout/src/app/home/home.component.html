@@ -1,0 +1,214 @@
+
+<body class="bg-light">
+        <div class="container mt-3 px-0 py-0">
+                <nav class="navbar navbar-light bg-light">
+                    <div class="py-5 text-center">
+                        <a class="navbar-brand" href="#">
+                          <img src="https://getbootstrap.com/docs/4.3/assets/brand/bootstrap-solid.svg"   width="72" height="72" alt="">
+                       </a>
+                       <h2>checkout form</h2>
+                       <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+                    </div>
+                </nav>
+                <div class="row bg-light">
+                    <div class="col-md-8">
+                        <h4 class="ml-3">Billing address</h4>
+                        <form>
+                                <div class="row">
+                                  <div class="col mb-2">
+                                      <label>First name</label>
+                                    <input type="text" class="form-control" placeholder="First name" name="first" [(ngModel)]="firstname"   />
+                                  </div>
+                                  <div class="col mb-3">
+                                      <label>Lastname</label>
+                                    <input type="text" class="form-control" placeholder="Last name"  name="last" [(ngModel)]="Lastname" />
+          
+                                  </div>
+                                </div>
+                                <div class="form-group mt-2 mb-2">
+                                        <label>Username</label>
+                                        <div class="input-group mt-1">
+                                           
+                                                <div class="input-group-prepend">
+                                                  <span class="input-group-text" id="basic-addon1">@</span>
+                                                </div>
+                                              <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="username" [(ngModel)]="Username">
+                                         </div>
+
+                                </div>
+                                <div class="form-group">
+                                        <label for="exampleFormControlInput1">Email address</label>
+                                        <span class="text-muted">(Optional)</span>
+                                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email" [(ngModel)]="emailaddress" />
+                                        
+                                      </div>
+                                      <div class="form-group">
+                                            <label for="inputAddress">Address</label>
+                                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="address"  [(ngModel)]="Addressdetails" >
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="inputAddress2">Address 2</label>
+                                            <span class="text-muted">(Optional)</span>
+                                            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" name="address2" [(ngModel)]="address2">
+                                          </div>
+                                          <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                  <label for="inputCountry">Country</label>
+                                                  
+                                                  <select id="inputCountry" class="form-control" name="country" [(ngModel)]="country">
+                                                        <option selected>Choose...</option>
+                                                        <option>INDIA</option>
+                                                        <option>US</option>
+                                                        <option>UK</option>
+                                                      </select>
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                  <label for="inputState">State</label>
+                                                  <select id="inputState" class="form-control" name="state" [(ngModel)]="state">
+                                                    <option selected>Choose...</option>
+                                                    <option>Telangana</option>
+                                                    <option>Andhrapradesh</option>
+                                                    <option>Tamilnadu</option>
+                                                  </select>
+                                                </div>
+                                                <div class="form-group col-md-2">
+                                                  <label for="inputZip">Zip</label>
+                                                  <input type="text" class="form-control" id="inputZip" name="zip" [(ngModel)]="zip">
+                                                </div>
+                                              </div><hr>
+                                              <div class="form-group">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input" type="checkbox"  [(ngModel)]="checklist" name="checklist" >
+                                                      <label class="form-check-label" >
+                                                            Shipping address is the same as my billing address
+                                                      </label>
+                                                     
+                                                    </div>
+                                                  </div>
+                                                  <div class="form-group">
+                                                        <div class="form-check">
+                                                          <input class="form-check-input" type="checkbox" [(ngModel)]="checklist2" name="checklist2">
+                                                          <label class="form-check-label" >
+                                                                Save this information for next time
+                                                            </label>
+                                                         
+                                                        </div>
+                                                      </div><hr>
+                                                      <h4>Payment</h4>
+                                                      <fieldset class="form-group">
+                                                            <div class="row">
+                                                             
+                                                              <div class="col-sm-10">
+                                                                <div class="form-check">
+                                                                  <input class="form-check-input" type="radio" name="gridRadios"  value="option1" [(ngModel)]="card "checked>
+                                                                  <label class="form-check-label" >
+                                                                   Credit card
+                                                                  </label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                  <input class="form-check-input" type="radio" name="gridRadios" value="option2" [(ngModel)]="card ">
+                                                                  <label class="form-check-label" >
+                                                                   Debit card
+                                                                  </label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                        <input class="form-check-input" type="radio" name="gridRadios"  value="option3" [(ngModel)]="card ">
+                                                                        <label class="form-check-label" >
+                                                                  PayPal
+                                                                  </label>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </fieldset>
+                                                          <div class="row">
+                                                                <div class="col mb-2">
+                                                                    <label>Name On Card</label>
+                                                                  <input type="text" class="form-control" name="cardname" [(ngModel)]="cardname" >
+                                                                  <small>Full name as displayed on card</small>
+                                                                </div>
+                                                                <div class="col mb-3">
+                                                                    <label>CreditCard number</label>
+                                                                  <input type="text" class="form-control" name="CreditCardnumber" [(ngModel)]="CreditCardnumber" >
+                                                                </div>
+                                                              </div>
+                                                              <div class="row">
+                                                                    <div class="col-md-3 mb-2">
+                                                                        <label>Expiration</label>
+                                                                      <input type="text" class="form-control" name="Expiration" [(ngModel)]="Expiration">
+                                                                      
+                                                                    </div>
+                                                                    <div class="col-md-3 mb-3">
+                                                                        <label>CVV</label>
+                                                                      <input type="text" class="form-control" name="CVV" [(ngModel)]="CVV">
+                                                                    </div>
+                                                                  </div><hr>
+                                                                  <button type="button" class="btn btn-primary btn-lg btn-block" (click)="checkout()">Continue to Checkout</button>
+                              </form>
+                                           
+                    </div>
+                    <div class="col-md-4">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h4 class="text-muted">Your Cart</h4>
+                            <h1 class="badge badge-secondary badge-pill">3</h1>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6>Product name</h6>
+                                    <small>Brief description</small>
+                                </div>
+                                <span class="text-muted">$12</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                            <h6>second product name</h6>
+                                            <small>Brief description</small>
+                                        </div>
+                                        <span class="text-muted">$8</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                            <h6>Third item</h6>
+                                            <small>Brief description</small>
+                                        </div>
+                                        <span class="text-muted">$5</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center bg-light">
+                                    <div>
+                                            <h6 class="text-success">Promo code</h6>
+                                            <small class="text-success">EXAMPLE CODE</small>
+                                        </div>
+                                        <span class="text-success">-$5</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    
+                                            <h6>Total(USD)</h6>
+                                            
+                                        
+                                        <span>$20</span>
+                            </li>
+                        </ul>
+                        <div class="input-group mt-3">
+                            <input type="text" class="form-control" placeholder="promocode">
+                            <div class="input-group-prepend">
+                                <button type="button" class="btn btn-secondary">Redeem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div><br>
+                <div class="footer text-center p-5">
+                  <span>&copy;2017-2018 Company Name</span>
+                  <ul class="nav justify-content-center pt-2 text-primary">
+                    <li class="nav-item">Privacy</li>
+                    <li class="nav-item px-3">Terms</li>
+                    <li class="nav-item">Conditions</li>
+                  </ul>
+             </div>
+               
+                   
+                    
+            </div>
+            
+            
+           
+</body>
